@@ -1,0 +1,523 @@
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 400;
+    font-display: optional;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format('woff2'), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format('woff')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Netflix Sans';
+    background-color: #000;
+}
+
+h1 {
+    margin-bottom: 16px;
+    font-size: 1.75rem;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3,
+p {
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*helper classes*/
+.wrapper {
+    background: linear-gradient(0deg, rgba(3, 3, 3, 0.6), rgba(5, 5, 5, 0.6)), url(https://assets.nflxext.com/ffe/siteui/vlv3/ebff1e0f-5704-423f-b4c6-94914dabe25b/791d6f9c-07d1-4009-a2a3-8e875d0d4a03/NG-en-20220509-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-size: cover;
+    border-bottom: 8px solid #222;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (min-width: 950px) {
+    .container {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+
+/*labels and buttons*/
+.btn {
+    display: inline-block;
+    padding: .25rem .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #e50914;
+    border-radius: 2px;
+}
+
+input[type="email"] {
+    padding: 10px 11px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+/*cta form*/
+.cta {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 0.5fr 135px 0.5fr;
+    grid-template-rows: auto;
+    row-gap: 16px;
+}
+
+.cta input[type="email"] {
+    grid-column: 1/4;
+}
+
+.btn-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 2/3;
+    padding: .75rem .95rem;
+    transition: 100ms ease-in-out;
+}
+
+.btn-cta:hover {
+    background-color: #fc2833;
+}
+
+.btn-cta img {
+    width: 10px;
+    height: 15px;
+}
+
+
+@media (min-width: 950px) {
+    .cta {
+        grid-template-columns: 0.7fr 0.3fr;
+    }
+
+    .cta input[type="email"] {
+        grid-column: 1/2;
+        padding: 17.5px 11px;
+    }
+
+    .btn-cta {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 1.625rem;
+    }
+
+    .btn-cta img {
+        width: 10px;
+        height: 30px;
+    }
+}
+
+
+/*header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.header__logo img {
+    width: 120px;
+    height: 35px;
+}
+
+@media (min-width: 950px) {
+    .header.container {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+    }
+
+    .header__logo img {
+        width: 170px;
+        height: 50px;
+    }
+
+    .header .btn {
+        padding: 7px 17px;
+    }
+}
+
+/*intro*/
+.intro {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro.container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.intro__text {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 550px) {
+    .intro.container {
+        padding-top: 145px;
+        padding-bottom: 130px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .intro__text h1 {
+        font-size: 3.125rem;
+    }
+
+    .intro__text .sub-title {
+        font-size: 1.625rem;
+    }
+
+    .intro form h3 {
+        margin-bottom: 17px;
+    }
+}
+
+
+/*features section*/
+.feature__box {
+    text-align: center;
+    border-bottom: 8px solid #222;
+}
+
+.feature__box.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.feature__box .box-text .title {
+    margin-bottom: 8px;
+    font-size: 1.625rem;
+}
+
+.feature__box .box-text .sub-title {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+}
+
+.feature__box .story-container {
+    position: relative;
+}
+
+.feature__box .story-container .story-img {
+    position: relative;
+}
+
+.feature__box .story-container .story-img.z-index {
+    z-index: 2;
+}
+
+.feature__box .story-container .story-video {
+    position: absolute;
+    top: 20.7%;
+    left: 13%;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+}
+
+
+.feature__box .story-container-animation {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background: #000;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    min-width: 15em;
+    padding: .5em .65em;
+    border: 2px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 2em 0 #000;
+    border-radius: .75em;
+}
+
+.feature__box .story-container-animation::after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    display: block;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    background-size: auto;
+    background-size: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.feature__box .story-container-animation img {
+    height: 3em;
+    padding-right: .75em;
+}
+
+.feature__box .story-container-animation .downloading {
+    flex-grow: 1;
+    text-align: left;
+    font-size: .9em;
+    color: #fff;
+}
+
+@media (min-width: 550px) {
+    .feature__box.container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .feature__box .box-text .title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .feature__box .box-text .sub-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .feature__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feature__box.container {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .feature__box .box-text {
+        flex-basis: 52%;
+        text-align: left;
+    }
+
+    .feature__box .box-text .title {
+        font-size: 3.125rem;
+    }
+
+    .feature__box .box-text .sub-title {
+        font-size: 1.625rem;
+    }
+
+    .flex-reverse.feature__box .box-text {
+        order: 2;
+    }
+
+    .feature__box .story-container {
+        flex-basis: 45%;
+    }
+
+    .feature__box .story-container .story-img.mg-neg {
+        margin: -8% 0 -4% -35%;
+    }
+
+    .feature__box .story-container-animation {
+        transform: translateX(-80%);
+    }
+}
+
+/*FAQ*/
+.faq {
+    border-bottom: 8px solid #222;
+}
+
+.faq.container {
+    padding: 70px 0;
+}
+
+.faq .title {
+    text-align: center;
+    font-size: 1.625rem;
+}
+
+.faq-component{
+    max-width: 815px;
+    margin: 0 auto 25px;
+}
+
+.faq-item {
+    margin-bottom: 8px;
+}
+
+.faq-item-question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em 2.2em 0.8em 1.2em;
+    margin-bottom: 1px;
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: #303030;
+    border: 0;
+}
+
+.faq-item-question .thin-x span{
+    display: block;
+    width: 23px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.faq-item-question .thin-x .first{
+    transform: rotate(90deg) translateX(3px);
+    transition: 100ms ease-in-out;
+}
+
+.faq-item-question .thin-x .second{
+    transition: 100ms ease-in-out;
+}
+
+.faq-item-question .rotate.thin-x .first{
+    transform: rotate(42deg) translateX(0px) translateY(1px);
+}
+
+.faq-item-question .rotate.thin-x .second{
+    transform: rotate(-41deg) translateY(-2px);
+}
+
+.faq-item-answer {
+    max-height: 0;
+    background-color: #303030;
+    transition: max-height 200ms ease-out;
+    overflow: hidden;
+}
+
+.is-expanded.faq-item-answer{
+    max-height: 900px;
+    transition: max-height 200ms ease-in;
+}
+
+.faq-item-answer p{
+    padding: 0.8em 2.2em 0.8em 1.2em;
+}
+
+.faq form{
+    width: 85%;
+    max-width: 815px;
+    margin: auto;
+}
+
+
+
+@media (min-width: 550px) {
+    .faq.container {
+        padding: 70px 45px;
+    }
+
+    .faq .title {
+        font-size: 2.5rem;
+    }
+
+    .faq-component{
+        margin-bottom: 45px;
+    }
+}
+
+@media (min-width: 950px){
+    .faq .title {
+        font-size: 3.125rem;
+    }
+
+    .faq-item-question,
+    .faq-item-answer p {
+        font-size: 1.625rem;
+    }
+
+
+}
+
+/*Footer*/
+.footer.container{
+    padding: 50px 16px 0px;
+    margin: 0 auto 30px;
+    width: 90%;
+}
+
+.footer-top {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.footer-top a,
+.footer__links a{
+    font-size: 14px;
+    color: #757575;
+}
+
+.footer-top a:hover,
+.footer__links a:hover{
+    text-decoration: underline;
+}
+
+.footer__links{
+    max-width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.footer__links a{
+    display: inline-block;
+    width: 45%;
+    min-width: 100px;
+    padding-right: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-bottom{
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #757575;
+}
+
+@media (min-width: 950px){
+    .footer__links a{
+        width: 33%;
+    }
+}
